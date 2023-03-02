@@ -12,11 +12,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
     </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        <frameset cols = "40%,*,0%">
+            <frame name = "top" src = "frame1.html" />
+            <frame name = "main" src = "temp.html" />
+            
+         
+            <noframes>
+               <body>Your browser does not support frames.</body>
+            </noframes>
+            
+         </frameset>
         
         <script src="" async defer></script>
-    </body>
 </html>
