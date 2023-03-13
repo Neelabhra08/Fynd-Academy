@@ -1,0 +1,16 @@
+In class (CSS):
+
+1. text-align
+2. text-decoration
+3. text-transform
+4. Real practical example of text-align-last
+5. different colors of underline and overline used together
+ 
+
+HW:
+
+1.unicode-bidi
+2.text decoration as short hand property
+3.text-transform: Sentence Case (try to find something without using span)
+4.text-vertical align
+5. text spacing

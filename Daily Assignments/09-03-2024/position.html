@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+
+      }
+      h1{
+        font-size: 30px;
+      }
+      
+      .box {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background: red;
+        color: white;
+      }
+      
+      #c_1 {
+        position: relative;
+        top: 20px;
+        left: 20px;
+        background: blue;
+      }
+
+      #c_2 {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: blue;
+      }
+
+      #c_2 {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: blue;
+      }
+
+      dl > div {
+        background: #fff;
+        padding: 24px 0 0 0;
+      }
+      
+      dt {
+        background: #b8c1c8;
+        border-bottom: 1px solid #989ea4;
+        border-top: 1px solid #717d85;
+        color: #fff;
+        font: bold 18px/21px Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 2px 0 0 12px;
+        position: -webkit-sticky;
+        position: sticky;
+        top: -1px;
+      }
+      
+      dd {
+        font: bold 20px/45px Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0 0 0 12px;
+        white-space: nowrap;
+      }
+      
+      dd + dd {
+        border-top: 1px solid #ccc;
+      }
+
+</style>
+<body>
+    <h1>Positon: relative</h1>
+    <div class="box" id="one">One</div>
+    <div class="box" id="c_1">Two (relative)</div>
+    <div class="box" id="three">Three</div>
+    <div class="box" id="four">Four</div>
+    <br>
+
+    <h1>Positon: absolute</h1>
+    <div class="box" id="one">One</div>
+    <div class="box" id="c_2">Two (absolute)</div>
+    <div class="box" id="three">Three</div>
+    <div class="box" id="four">Four</div>
+
+    <h1>Positon: fixed </h1>
+    <div class="box" id="one">One</div>
+    <div class="box" id="c_3">Two (fixed) Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, aspernatur? Aut cum repellat dolorem, beatae voluptate officia magni accusamus ducimus laborum facilis error distinctio. Exercitationem obcaecati quam suscipit molestias voluptatem.</div>
+    <div class="box" id="three">Three</div>
+    <div class="box" id="four">Four</div>
+
+    <h1>Positon: sticky </h1>
+    <dl>
+        <div>
+          <dt>A</dt>
+          <dd>Andrew W.K.</dd>
+          <dd>Apparat</dd>
+          <dd>Arcade Fire</dd>
+          <dd>At The Drive-In</dd>
+          <dd>Aziz Ansari</dd>
+        </div>
+        <div>
+          <dt>C</dt>
+          <dd>Chromeo</dd>
+          <dd>Common</dd>
+          <dd>Converge</dd>
+          <dd>Crystal Castles</dd>
+          <dd>Cursive</dd>
+        </div>
+        <div>
+          <dt>E</dt>
+          <dd>Explosions In The Sky</dd>
+        </div>
+        <div>
+          <dt>T</dt>
+          <dd>Ted Leo &amp; The Pharmacists</dd>
+          <dd>T-Pain</dd>
+          <dd>Thrice</dd>
+          <dd>TV On The Radio</dd>
+          <dd>Two Gallants</dd>
+        </div>
+      </dl>
+
+</body>
+</html>

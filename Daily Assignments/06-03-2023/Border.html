@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<!--Copied because the example was very good-->
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: #dfe7e9;
+     
+        height: 100%;
+        text-align: center;
+    }
+    
+    h1{
+        color: #3d1860;
+        font-size: 5rem;
+    }
+    hr{
+        border-color: #643579;
+       width: 96rem;
+    }
+    
+    h2{
+        color: #643579;
+    }
+    .border-style{
+        height: 100%;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 10px;
+        justify-content: space-evenly;
+    }
+    .border-style>div{
+        height: 10rem;
+        width: 10rem;
+        background-color: #80e085;
+        color: #21ba9e;
+        
+    }
+    
+    
+    .div-1{
+        border: 5px solid #d40c0c;
+    }
+    .div-2{
+        border: 10px dotted #d40c0c;
+    }
+    .div-3{
+        border: 5px dashed #d40c0c;
+    }
+    .div-4{
+        border: 10px double #d40c0c;
+    }
+    .div-5{
+        border: 10px groove #d40c0c;
+    }
+    .div-6{
+        border: 10px ridge #d40c0c;
+    }
+    .div-7{
+        border: 10px inset #d40c0c;
+    }
+    .div-8{
+        border: 10px outset #d40c0c;
+    }
+    .div-9{
+        border: 10px none #d40c0c;
+    }
+    .div-10{
+        border: 10px  #d40c0c;
+        border-style: double inset;
+    }
+    .div-11{
+        border: 10px  #d40c0c;
+        border-style:double ridge inset groove ;
+    }
+    
+    .div-12{
+        border: 10px  #d40c0c;
+        border-style:outset inset groove ridge;
+    }
+    
+    .square{
+    border-radius: 10px;
+    }
+    .round{
+        border-radius: 50%;
+    }
+    .uoda{
+      border-start-start-radius: 10px;
+      border-start-end-radius: 10px;
+      border-end-start-radius: 50%;
+      border-end-end-radius: 50%;
+    }
+    .drop{
+        border-radius: 50%;
+        border-top-right-radius:10px ;
+     
+    }
+    .slope{
+        border-radius:40% 40% 40% 40%/30% 30% 70% 70%;
+    }
+    
+    .slope1{
+        border-radius:40% 40% 40% 40%/70% 70% 30% 30%;
+    }
+    
+    .slope2{
+        border-radius: 40% 40% 40% 40%/70% 70% 70% 70%;
+    }
+    .egg{
+        border-radius:50%/60% 60% 40% 40%;
+    }
+    
+    .slop3{
+        border-radius:100% 0% /30% 0% ;
+    }
+    
+    .oval{
+        border-radius: 50%;
+        height: 5rem !important;
+    }
+    
+    .ftriangle{
+      border:5rem solid;
+      border-color: #88acdf #3e7ace #506a8f #66a0f2;
+    }
+    
+    .ttriangle{
+        border:5rem solid;
+        background-color: transparent !important;
+        border-color:#9dc6ff transparent transparent transparent ;
+    }
+    .rtriangle{
+        border:5rem solid;
+        background-color: transparent !important;
+        border-color:transparent #9dc6ff transparent transparent ;
+    }
+    .btriangle{
+        border:5rem solid;
+        background-color: transparent !important;
+        border-color:transparent transparent #9dc6ff transparent ;
+    }
+    .ltriangle{
+        border:5rem solid;
+        background-color: transparent !important;
+        border-color:transparent transparent transparent #9dc6ff;
+    }
+    
+    .lbtriangle{
+        border:5rem solid;
+        background-color: transparent !important;
+        border-color:transparent transparent #9dc6ff #9dc6ff;
+    }
+    
+    .utriangle{
+        height: 0 !important;
+        width: 0 !important;
+        background-color: transparent !important;
+        border-left: 70px solid transparent;
+        border-right: 70px solid transparent;
+        border-bottom: 150px solid #9dc6ff;
+      }
+    
+    .trapezoid{
+        border:4rem solid;
+        background-color: transparent !important;
+        border-color:transparent transparent #9dc6ff transparent ;
+    }
+    .ring{
+        border-radius: 50%;
+        border: 10px solid blue;
+        background-color: transparent !important;
+        height: 100%;
+        width: 100px;
+    }
+    
+    
+    .pattern1{
+         border: 10px solid transparent;
+        border-image-source: url(./images/pattern1.jpeg);
+        border-image-repeat: round;  
+        border-image-slice: 59;
+        border-image-width: 15px;
+    }
+    
+    .pattern2{
+        border: 10px solid transparent;
+        border-image-source: url(./images/pattern2.jpeg);
+        border-image-repeat: revert;
+        border-image-slice: 10%;
+        border-image-width: 15px;
+    }
+    
+    .pattern3{
+        border: 10px solid transparent;
+        border-image-source: url(./images/pattern3.jpeg);
+        border-image-repeat: repeat;
+        border-image-slice: 40%;
+        border-image-width: 18px;
+    }
+    .p1{
+        border:10px double #d40c0c;
+        border-left: transparent;
+        border-top: transparent;
+    }
+    .p2{
+        width: 15rem !important;
+        height: 5rem !important;
+        border:10px solid #d40c0c;
+        border-right: transparent;
+        border-top: transparent;
+        border-bottom: transparent;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .p3{
+        border:10px solid #d40c0c;
+        border-right: transparent;
+        border-left: transparent;
+        border-bottom: transparent;
+     
+    }
+    .p4{
+        border:15px solid;
+        border-top-color: #d40c0c;
+        border-bottom-color:#d40c0c;
+        border-left: transparent;
+        border-right: transparent;
+    }
+    .p5{
+        background: transparent !important;
+        border: 5px solid #93C43E;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    .p6{
+        /* background: transparent !important; */
+        height: 100%;
+        width: 100%;
+        border: 5px solid #039A57;
+    }
+    .p7{
+        /* background: transparent !important; */
+        height: 100%;
+        width: 100%;
+        border: 5px solid #19bb7d;
+    }
+    
+    .p8{
+        /* background: transparent !important; */
+        height: 100%;
+        width: 100%;
+        border: 5px solid #06550e;
+    }
+    .p9{
+        /* background: transparent !important; */
+        height: 100%;
+        width: 100%;
+        border: 5px solid #5C0152;
+    }
+    .p10{
+        /* background: transparent !important; */
+        height: 100%;
+        width: 100%;
+        border: 5px solid #afb71c;
+    }
+    
+    .p11{
+        /* background: transparent !important; */
+        height: 100%;
+        width: 100%;
+        border: 5px solid #1c45b7;
+    }
+    
+    .p12{
+        /* background: transparent !important; */
+        height: 100%;
+        width: 100%;
+        border: 5px solid #C51125;
+    }
+    .p13{
+        /* background: transparent !important; */
+        height: 100%;
+        width: 100%;
+        border: 5px solid #DF6419;
+    }
+    .p14{
+        /* background: transparent !important; */
+        height: 100%;
+        width: 100%;
+        border: 5px solid #DE9402;
+    }
+    
+    .outline{
+        height: 120rem !important;
+    }
+    
+    .outline-1{
+        outline: 5px solid #d40c0c;       
+    }
+    .outline-2{
+        outline: 10px dotted #d40c0c;        
+    }
+    .outline-3{
+        outline:  5px dashed #d40c0c;      
+    }        
+    .outline-4{        
+        outline: 10px double #d40c0c;      
+    }
+    .outline-5{
+        outline:10px groove #d40c0c;       
+    }
+    .outline-6{
+        outline:10px ridge #d40c0c;       
+    }
+    .outline-7{
+        outline:10px inset #d40c0c;        
+    }
+    .outline-8{
+        outline:10px outset #d40c0c;      
+    }
+    .outline-9{
+        outline:10px none #d40c0c;   
+            
+    }
+    
+    
+    .outline-1b{
+        outline: 5px solid #d40c0c;  
+        border: 5px solid #b22a2a;        
+    }
+    .outline-2b{
+        outline: 10px dotted #d40c0c;  
+        border: 10px dotted #b22a2a;        
+    }
+    .outline-3b{
+        outline:  5px dashed #d40c0c;  
+        border: 5px dashed #b22a2a;        
+    }        
+    .outline-4b{        
+        outline: 10px double #d40c0c;     
+        border: 10px double #b22a2a;        
+    }
+    .outline-5b{
+        outline:10px groove #d40c0c;
+        border: 10px groove #b22a2a;        
+    }
+    .outline-6b{
+        outline:10px ridge #d40c0c;
+        border: 10px ridge #b22a2a;        
+    }
+    .outline-7b{
+        outline:10px inset #d40c0c;
+        border: 10px inset #b22a2a;        
+    }
+    .outline-8b{
+        outline:10px outset #d40c0c;
+        border: 10px outset #b22a2a;        
+    }
+    
+    
+    .outline1{
+        border: 5px solid #000406;
+        outline: 100px auto #1da31d;
+    }
+    
+    
+    
+    .outline2{
+        outline: 15px double blue;
+    }
+    .outline3{
+        outline: 15px double #A0E4F1;
+        outline-offset: -20px;
+    }
+    .outline4{
+        border: 5px solid #000406;
+        outline: 15px double #A0E4F1;
+        outline-offset: -20px;
+    }
+    .outline5{
+        outline: 10px dotted #A0E4F1;
+        outline-offset: -7px;
+    }
+    .outline6{
+        outline: 15px dotted #a0e4f1;
+        outline-offset: -5px;
+    }
+    .outline7{
+        outline: 40px dotted #a0e4f1;
+        outline-offset: -30px;
+    }
+    
+    .outline8{
+        outline: 40px dashed #3E7ACE;
+    }
+    
+    .outline9{
+        outline: 40px dashed #3E7ACE;
+         outline-offset: -20px; 
+    }
+    .outline10{
+        outline: 15px dashed #A0E4F1;
+        outline-offset: -15px;
+    }
+    .outline11{
+        outline: 35px dashed #A0E4F1;
+        outline-offset: -15px;
+    }
+    
+    .outline12{
+        outline: 20px dashed #A0E4F1;
+        outline-offset: -13px;
+    }
+    
+    .outline13{
+        outline: 29px dashed #A0E4F1;
+        outline-offset: -29px;
+    }
+    .outline14{
+        outline: 5px dashed #A0E4F1;
+        outline-offset: -15px;
+    }
+    .outline15{
+        outline: 5px solid #A0E4F1;
+        outline-offset: -10px;
+    }
+    .outline16{
+        border: 40px dotted blue;
+        outline: 23px dashed #A0E4F1;
+        outline-offset: -15px;
+    }
+    .outline17{
+        border: 79px dotted blue;
+        outline: 40px dashed #A0E4F1;
+        outline-offset: -40px;
+    }
+    .outline18{
+        height: 8rem !important;
+        width: 5rem !important;
+        border: 40px dotted blue;
+        outline: 23px dashed #A0E4F1;
+        outline-offset: -15px;
+    }
+    .outline19{
+        border: 73px dotted blue;
+        outline: 30px dashed #A0E4F1;
+        outline-offset: -63px;
+    
+    }
+    .pp5{
+        height: 8rem !important;
+        width: 5rem !important;
+    }
+</style>
+<body>
+    <h1>Border Creativity</h1> <hr>
+   <br><br> <br>
+    <h2>Border style</h2> <br> <br>
+    <div class="border-style">
+       
+        <div class="div-1" >Solid border</div>
+        <div class="div-2" >A dotted border.</div>
+        <div class="div-3" >A dashed border.</div>
+        <div class="div-4" >A double border.</div>
+        <div class="div-5" >A groove border.</div>
+        <div class="div-6" >A ridge border.</div>
+        <div class="div-7" >An inset border.</div>
+        <div class="div-8" >An outset border.</div>
+        <div class="div-9" >No border.</div> 
+        <div class="div-10" >A mixed border(double + inset).</div> 
+        <div class="div-11" >A mixed border(double ridge inset groove).</div> 
+        <div class="div-12" >A mixed border(:outset inset groove ridge).</div> 
+
+    </div>
+   <br><br>
+   <h2>Different shapes</h2><br><br>
+    <div class="border-style">
+        <div class="square">square</div>
+        <div class="round">round</div>
+        <div class="uoda ">uoda </div>
+        <div class="drop">drop</div>
+        <div class="slope">slope</div>
+        <div class="slope1">slope1</div>
+        <div class="slope2">slope2</div>
+        <div class="egg">egg</div>
+        <div class="slop3"><br> slop3</div>
+        <div class="oval">oval</div>
+        <div class="ftriangle"></div>
+        <div class="ltriangle"></div>
+        <div class="rtriangle"></div>
+        <div class="ttriangle"></div>
+        <div class="btriangle"></div>
+        <div class="lbtriangle"></div>
+        <div class="utriangle"></div>
+        <div class="trapezoid"></div>
+        <div class="ring"></div>
+     
+    </div>
+   <br><br>
+   <h2>Border Images</h2><br><br>
+   <div class="border-style">
+       <div class="pattern1"></div>
+       <div class="pattern2"></div>
+       <div class="pattern2"> <div class="pattern1" style="height: 136px;">  </div></div>
+       <div class="pattern3"></div>
+      
+   </div>
+   <br><br>
+    <h2>Outline</h2>
+    <br><br> <br><br>
+    <div class="border-style outline"> 
+        <div class="outline-1" >Solid outline</div>
+        <div class="outline-2" >A dotted outline.</div>
+        <div class="outline-3" >A dashed outline.</div>
+        <div class="outline-4" >A double outline.</div>
+        <div class="outline-5" >A groove outline.</div>
+        <div class="outline-6" >A ridge outline.</div>
+        <div class="outline-7" >An inset outline.</div>
+        <div class="outline-8" >An outset outline.</div>
+        <div class="outline-9" >No outline.</div> 
+        <div class="outline-1b" >Solid outline</div>
+        <div class="outline-2b" >A dotted outline.</div>
+        <div class="outline-3b" >A dashed outline.</div>
+        <div class="outline-4b" >A double outline.</div>
+        <div class="outline-5b" >A groove outline.</div>
+        <div class="outline-6b" >A ridge outline.</div>
+        <div class="outline-7b" >An inset outline.</div>
+        <div class="outline-8b" >An outset outline.</div>
+        <div class="outline1"></div>
+        <div class="outline2"></div>
+        <div class="outline3"></div>
+        <div class="outline4"></div>
+        <div class="outline5"></div>
+        <div class="outline6"></div>
+        <div class="outline7"></div>
+        <div class="outline8"></div>
+        <div class="outline9"></div>
+        <div class="outline10"></div>
+        <div class="outline11"></div>
+        <div class="outline12"></div>
+        <div class="outline13"></div>
+        <div class="outline14"></div>
+        <div class="outline15"></div>
+        <div class="outline16"></div>
+        <div class="outline17"></div>
+        <div class="outline18"></div>
+        <div class="outline19"></div>
+    </div>
+</body>
+</html>
