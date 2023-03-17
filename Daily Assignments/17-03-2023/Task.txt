@@ -1,0 +1,6 @@
+Class:
+1. Transitions and hover
+2. hover on one container and transition on navbar with different time of in and out.
+3. signs - .container > p - applies to direct child of container, ~ - selects all the element after the former selector.
+4. Grid
+

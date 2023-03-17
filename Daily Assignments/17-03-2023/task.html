@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        height: 100px;
+        width: 150px;
+        transition-property: width;
+        
+        border: .5rem solid red;
+        
+        background-color: pink;
+    }
+    .three:hover + .one{
+        width: 300px;
+        transition-duration: 5s;
+        transition-timing-function: linear;
+    }
+
+</style>
+<body>
+    <h1>Transition in Css</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum iusto doloremque ullam, maiores ut, numquam ad incidunt nesciunt repellat eius quia suscipit ex dolore ea, nemo magnam recusandae pariatur qui?</p>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <div class="four"></div>
+    <div class="five"></div>
+</body>
+</html>
