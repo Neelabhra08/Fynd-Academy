@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            padding: 100px 0;
+        }
+        .autofill{
+            display: grid;
+            width: 90vw;
+            border: 1px solid black;
+            grid-gap:10px;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+        .section1{
+             background-color: red; 
+            border: 1px solid black;
+            height: auto;
+            max-width: 100%;
+            min-height: 200px;
+        }
+        .section2{ background-color: pink;border: 1px solid black;
+            max-width: 100%;
+            min-height: 200px;
+            height: auto;
+        }
+        .section3{ background-color: burlywood;border: 1px solid black;
+            max-width: 100%;
+            min-height: 200px;
+            height: auto;
+        }
+        .section4{
+            background-color: palevioletred;
+            border: 1px solid black;
+            max-width: 100%;
+            min-height: 200px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="autofill">
+        <div class="section1">Section1</div>
+        <div class="section2">Section2</div>
+        <div class="section3">Section3</div>
+        <div class="section4">Section4</div>
+    </div>
+</body>
+</html>
