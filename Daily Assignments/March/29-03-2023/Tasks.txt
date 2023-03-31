@@ -1,0 +1,4 @@
+1. Closures
+2. Lexical Scoping
+3. Function Hoisting
+4. Nesting function calling

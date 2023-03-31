@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        font-size: 70px;
+        text-align: center;
+        background-color: red;
+        color: white;
+        display: none;
+    }
+
+    @media (min-width: 500px) and (max-width: 650px){
+        #box4 {
+            display: block;
+            background-color: black;
+        }
+    }
+</style>
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4">Big Screen</div>
+</body>
+</html>

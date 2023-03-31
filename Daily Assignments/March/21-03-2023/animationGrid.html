@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 100vh;
+        background-color: navajowhite;
+    }
+    .gridemo{
+        border: 2px solid black;
+    }
+
+    #left:hover {
+        
+    }
+
+    @keyframes lefthover {
+        from {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        to {
+            grid-template-columns: 2fr 1fr 1fr;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="gridemo" id="left"></div>
+        <div class="gridemo" id="middle"></div>
+        <div class="gridemo" id="right"></div>
+    </div>
+</body>
+</html>

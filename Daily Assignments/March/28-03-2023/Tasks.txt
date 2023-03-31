@@ -1,0 +1,4 @@
+HW:
+1. Experiment with different variables - let, var, const
+2. Bitwise Operator
+3. if else, for loop, do while

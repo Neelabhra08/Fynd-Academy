@@ -1,0 +1,6 @@
+1. Function hoisting and variable hoisting
+2. onload and onsubmit
+3. domcontentloaded
+
+HW weekend:
+1. Game using keyevents - onkey up,down,press

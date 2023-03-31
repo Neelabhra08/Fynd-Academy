@@ -1,0 +1,6 @@
+JavaScript Start 
+
+1. If multithreading is not there, how JavaScript is so fast.
+2. in which class 'document' belongs to.
+3. Use <noscript> tag, when JavaScript is disabled for a site.
+4. what is the difference between VanillaJs and echmaJs.
